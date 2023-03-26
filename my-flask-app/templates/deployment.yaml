@@ -34,8 +34,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            # - name: SQLALCHEMY_DATABASE_URI
-            #   value: {{ .Values.sqlalchemy.database_uri }}
+            - name: SQLALCHEMY_DATABASE_URI
+              value: {{ .Values.sqlalchemy.database_uri }}
           ports:
             - name: http
               containerPort: 5000

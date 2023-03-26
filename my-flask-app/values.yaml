@@ -43,7 +43,7 @@ service:
   targetPort: 5000
 
 sqlalchemy:
-  database_uri: vault:secret/data/my-secret/database_uri
+  database_uri: 'postgresql://{username}:{password}@{DB_Endpoint}:{Port}/{DB_name}'
 
 ingress:
   enabled: false
